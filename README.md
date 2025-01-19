@@ -1,12 +1,12 @@
 ## 🌟 About the Project
-![image](![image](https://github.com/user-attachments/assets/e1112814-615f-4c83-b9d0-101a83076b70)
-)
+![image](https://github.com/user-attachments/assets/e1112814-615f-4c83-b9d0-101a83076b70)
+
 <b>1. This is a Python project under Windows for faster testing of laptops in the company to help the expert advance in the repair process.<b><br>
 <b>2. More features may be added in the future and the source code of this project is private<b>
 
 ## ⚆_⚆ About This [Iranslot](https://iranslot.com)
-![image](![image](https://github.com/user-attachments/assets/a731ccbe-e8f3-4758-b848-78b2003f4c05)
-)
+![image](https://github.com/user-attachments/assets/a731ccbe-e8f3-4758-b848-78b2003f4c05)
+
 
 <b>[Iranslot](https://www.iranslot.com) is a complete set of services in providing the best IT services in Iran and the most equipped specialized clinics for repairs, training and parts supply<b><br>
 
@@ -39,15 +39,15 @@ By default, the app comes with a list of popular DNS servers in Iran.
 | Radar DNS    | 10.202.10.10,10.202.10.11 |
 | Electro DNS  | 78.157.42.100,78.157.42.101 |
 ## 👀 ScreenShot
-![image](![image](https://github.com/user-attachments/assets/a9d40fc2-a7c2-4af0-9a37-4f226a871981)
-)
+![image](https://github.com/user-attachments/assets/a9d40fc2-a7c2-4af0-9a37-4f226a871981)
+
 
 ## :handshake: Contact
 
 2xAm1r - [Telegram](https://t.me/bftup) - Awmircode@gmail.com
 
-Project Link: [https://github.com/2xAm1r/Iranslot-App](https://github.com/i2xAm1r/Iranslot-App)
+Project Link: [https://github.com/i2xAm1r/Iranslot-App](https://github.com/i2xAm1r/Iranslot-App)
 
 ## Acknowledgments
 
-<b>This application was developed by [2xAm1r](https://github.com/2xAm1r/) The DNS server sets were provided by the developer and may be subject to change<b>
+<b>This application was developed by [i2xAm1r](https://github.com/i2xAm1r/) The DNS server sets were provided by the developer and may be subject to change<b>
