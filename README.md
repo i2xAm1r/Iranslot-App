@@ -1,18 +1,19 @@
 using System;
+using System.Diagnostics;
 using System.Threading;
 
 class Program
 {
     static void Main()
     {
-        DateTime startTime = DateTime.Now; // زمان شروع
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start(); // Start timing
 
-        Thread.Sleep(3000); // شبیه‌سازی یک عملیات ۳ ثانیه‌ای
+        Thread.Sleep(2000); // Simulate some work (2 seconds)
 
-        DateTime endTime = DateTime.Now; // زمان پایان
-        TimeSpan elapsedTime = endTime - startTime; // محاسبه زمان سپری شده
+        stopwatch.Stop(); // Stop timing
 
-        Console.WriteLine($"زمان سپری شده: {elapsedTime.TotalSeconds} ثانیه");
+        Console.WriteLine($"Elapsed time: {stopwatch.ElapsedMilliseconds} ms");
     }
 }
 ## 🌟 About the Project
