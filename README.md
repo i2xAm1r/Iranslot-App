@@ -1,19 +1,31 @@
 using System;
-using System.Diagnostics;
-using System.Threading;
+using System.Windows.Forms;
 
-class Program
+class Program : Form
 {
+    public Program()
+    {
+        // ایجاد دو رادیو باتن
+        RadioButton radio1 = new RadioButton() { Text = "Option 1", Location = new System.Drawing.Point(20, 20) };
+        RadioButton radio2 = new RadioButton() { Text = "Option 2", Location = new System.Drawing.Point(20, 50) };
+
+        // دکمه برای نمایش مقدار انتخاب شده
+        Button btnCheck = new Button() { Text = "Check Selection", Location = new System.Drawing.Point(20, 80) };
+        btnCheck.Click += (sender, e) =>
+        {
+            string selected = radio1.Checked ? "Option 1" : radio2.Checked ? "Option 2" : "None";
+            MessageBox.Show("Selected: " + selected);
+        };
+
+        // افزودن به فرم
+        Controls.Add(radio1);
+        Controls.Add(radio2);
+        Controls.Add(btnCheck);
+    }
+
     static void Main()
     {
-        Stopwatch stopwatch = new Stopwatch();
-        stopwatch.Start(); // Start timing
-
-        Thread.Sleep(2000); // Simulate some work (2 seconds)
-
-        stopwatch.Stop(); // Stop timing
-
-        Console.WriteLine($"Elapsed time: {stopwatch.ElapsedMilliseconds} ms");
+        Application.Run(new Program());
     }
 }
 ## 🌟 About the Project
