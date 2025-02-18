@@ -1,31 +1,64 @@
 using System;
 using System.Windows.Forms;
 
-class Program : Form
+namespace CalculatorApp
 {
-    public Program()
+    public partial class Form1 : Form
     {
-        // ایجاد دو رادیو باتن
-        RadioButton radio1 = new RadioButton() { Text = "Option 1", Location = new System.Drawing.Point(20, 20) };
-        RadioButton radio2 = new RadioButton() { Text = "Option 2", Location = new System.Drawing.Point(20, 50) };
-
-        // دکمه برای نمایش مقدار انتخاب شده
-        Button btnCheck = new Button() { Text = "Check Selection", Location = new System.Drawing.Point(20, 80) };
-        btnCheck.Click += (sender, e) =>
+        public Form1()
         {
-            string selected = radio1.Checked ? "Option 1" : radio2.Checked ? "Option 2" : "None";
-            MessageBox.Show("Selected: " + selected);
-        };
+            InitializeComponent();
+        }
 
-        // افزودن به فرم
-        Controls.Add(radio1);
-        Controls.Add(radio2);
-        Controls.Add(btnCheck);
-    }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            PerformCalculation("+");
+        }
 
-    static void Main()
-    {
-        Application.Run(new Program());
+        private void btnSubtract_Click(object sender, EventArgs e)
+        {
+            PerformCalculation("-");
+        }
+
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            PerformCalculation("*");
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+            PerformCalculation("/");
+        }
+
+        private void PerformCalculation(string operation)
+        {
+            double num1, num2, result = 0;
+
+            if (double.TryParse(txtNum1.Text, out num1) && double.TryParse(txtNum2.Text, out num2))
+            {
+                switch (operation)
+                {
+                    case "+": result = num1 + num2; break;
+                    case "-": result = num1 - num2; break;
+                    case "*": result = num1 * num2; break;
+                    case "/":
+                        if (num2 != 0)
+                            result = num1 / num2;
+                        else
+                        {
+                            MessageBox.Show("Cannot divide by zero!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        break;
+                }
+
+                lblResult.Text = "Result: " + result;
+            }
+            else
+            {
+                MessageBox.Show("Please enter valid numbers!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
 ## 🌟 About the Project
