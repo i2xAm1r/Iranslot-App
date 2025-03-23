@@ -1,4 +1,3 @@
-https://sub.spotifyxgirl.shop/fyKm15Wax30S7To9zUE503kYUgHk/db3d054a-6258-4bb5-8b67-bc397885684c/#Koosha-1
 
 ## 🌟 About the Project
 ![image](https://github.com/user-attachments/assets/e1112814-615f-4c83-b9d0-101a83076b70)
