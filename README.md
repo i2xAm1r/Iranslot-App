@@ -1,3 +1,52 @@
+using System;
+using System.Windows.Forms;
+
+namespace CarGame2013
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+
+            // تنظیم اولیه تایمر
+            timer1.Interval = 50;
+            timer1.Enabled = false;
+
+            // وصل کردن ایونت‌ها
+            this.MouseDown += new MouseEventHandler(Form1_MouseDown);
+            this.MouseUp += new MouseEventHandler(Form1_MouseUp);
+            timer1.Tick += new EventHandler(timer1_Tick);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            // حرکت ماشین به سمت راست
+            picCar.Left += 5;
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            timer1.Enabled = true;
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            timer1.Enabled = false;
+
+            // بررسی برخورد با مانع
+            if (picCar.Right > picBarrier.Left && picCar.Left < picBarrier.Right)
+            {
+                MessageBox.Show("آفرین، برنده شدی!");
+            }
+            else
+            {
+                MessageBox.Show("متأسفانه، بازنده شدی!");
+            }
+        }
+    }
+}
+
 
 ## 🌟 About the Project
 ![image](https://github.com/user-attachments/assets/e1112814-615f-4c83-b9d0-101a83076b70)
