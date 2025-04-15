@@ -1,4 +1,61 @@
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
+namespace CarGame
+{
+    public partial class Form1 : Form
+    {
+        PictureBox car;
+        PictureBox obstacle;
+        int carSpeed = 10;
+
+        public Form1()
+        {
+            InitializeComponent();
+            InitGame();
+
+            this.KeyDown += new KeyEventHandler(Form1_KeyDown); // رویداد فشردن کلید
+            this.Focus();
+        }
+
+        private void InitGame()
+        {
+            this.Width = 800;
+            this.Height = 600;
+            this.Text = "ماشین و مانه";
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.BackColor = Color.White;
+            this.KeyPreview = true;
+
+            // ساخت ماشین
+            car = new PictureBox();
+            car.Image = Image.FromFile("car.png"); // مسیر عکس ماشین
+            car.SizeMode = PictureBoxSizeMode.StretchImage;
+            car.SetBounds(100, 400, 100, 60);
+            this.Controls.Add(car);
+
+            // ساخت مانه
+            obstacle = new PictureBox();
+            obstacle.Image = Image.FromFile("obstacle.png"); // مسیر عکس مانه
+            obstacle.SizeMode = PictureBoxSizeMode.StretchImage;
+            obstacle.SetBounds(300, 400, 80, 80);
+            this.Controls.Add(obstacle);
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left && car.Left > 0)
+            {
+                car.Left -= carSpeed;
+            }
+            else if (e.KeyCode == Keys.Right && car.Right < this.ClientSize.Width)
+            {
+                car.Left += carSpeed;
+            }
+        }
+    }
+}
 
 ## 🌟 About the Project
 ![image](https://github.com/user-attachments/assets/e1112814-615f-4c83-b9d0-101a83076b70)
