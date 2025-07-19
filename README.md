@@ -1,4 +1,3 @@
-https://sub.spotifyxgirl.shop/fyKm15Wax30S7To9zUE503kYUgHk/4dc6dde0-3500-4bca-b5b4-b4d74978ee/#Iiii
 
 
 ## 🌟 About the Project
